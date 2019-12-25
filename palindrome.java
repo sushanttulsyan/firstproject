@@ -1,8 +1,6 @@
 public void doSomething() {
-    String result = doSomethingElse();
-    if (result.equalsIgnoreCase("Success")) 
-        // success
-    }
+    object result = doSomethingElse();
+    result = "name";
 }
  
 private String doSomethingElse() {
