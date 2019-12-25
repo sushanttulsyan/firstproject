@@ -1,25 +1,4 @@
-Skip to content
-Search or jump to…
 
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@sushanttulsyan 
-Learn Git and GitHub without any code!
-Using the Hello World guide, you’ll start a branch, write comments, and open a pull request.
-
-
-179
-223
-1.5k1.4kshopizer-ecommerce/shopizer
- Code Issues 108 Pull requests 15 Actions Projects 0 Security Insights
-shopizer/sm-core-model/src/main/java/com/salesmanager/core/model/customer/Customer.java
-@shopizer-ecommerce shopizer-ecommerce rebase master with 2.2.0
-92b078a on 9 Apr 2018
-340 lines (251 sloc)  8.02 KB
- 
 package com.salesmanager.core.model.customer;
 
 import java.math.BigDecimal;
@@ -360,15 +339,3 @@ public class Customer extends SalesManagerEntity<Long, Customer> implements Audi
 	}
 	
 }
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
