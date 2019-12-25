@@ -1,17 +1,23 @@
-class PalindromeExample{  
- public static void main(String args[]){  
-  int r,sum=0,temp;    
-  int n=454;//It is the number variable to be checked for palindrome  
+class MultithreadingDemo extends Thread 
+{ 
+    public void run() 
+    { 
+            System.out.println ("Thread " + 
+                  Thread.currentThread().getId() + 
+                  " is running"); 
+    } 
+} 
   
-  temp=n;    
-  while(n>0){    
-   r=n%10;  //getting remainder  
-   sum=(sum*10)+r;    
-   n=n/10;    
-  }    
-  if(temp==sum)    
-   System.out.println("palindrome number ");    
-  else    
-   System.out.println("not palindrome");    
-}  
-}  
+// Main Class 
+public class Multithread 
+{ 
+    public static void main(String[] args) 
+    { 
+        int n = 8; // Number of threads 
+        long num = 1;
+        for (int i=0; i<8; i++) 
+        { 
+            MultithreadingDemo object = new MultithreadingDemo(); 
+            object.start(); 
+        } 
+    } 
