@@ -1,17 +1,27 @@
-class PalindromeExample{  
- public static void main(String args[]){  
-  int r,sum=0,temp;    
-  int n=454;//It is the number variable to be checked for palindrome  
-  
-  temp=n;    
-  while(n>0){    
-   r=n%10;  //getting remainder  
-   sum=(sum*10)+r;    
-   n=n/10;    
-  }    
-  if(temp==sum)    
-   System.out.println("palindrome number ");    
-  else    
-   System.out.println("not palindrome");    
-}  
-}  
+public void disconnect(){
+  //System.err.println(this+":disconnect "+io+" "+connected);
+  //Thread.dumpStack();
+  try{
+    synchronized(this){
+      if(!connected){
+        return;
+      }
+      connected=false;
+    }
+    close();
+    eof_remote=eof_local=true;
+    thread=null;
+    try{
+      if(io!=null){
+        io.close();
+      }
+    }
+    catch(Exception e){
+      //e.printStackTrace();
+    }
+    // io=null;
+  }
+  finally{
+    Channel.del(this);
+  }
+}
